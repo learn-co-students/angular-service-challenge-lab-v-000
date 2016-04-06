@@ -1,6 +1,6 @@
 function DomainService($http){
   this.getData = function (domain) {
-    var url = 'http://localhost:8080/rest/domain/' + domain;
+    var url = '/rest/domain/' + domain;
     return $http.get(url);
   }
 }
