@@ -20,8 +20,7 @@ describe('SubRedditService', function () {
 		$httpBackend.expectGET('/rest/subreddit/javascript');
 
 		SubRedditService
-			.getData('javascript')
-			.then(function (res) {
+			.getData('javascript', function (res) {
 				if (res.data && res.data[0].key === 'hello') {
 					done();
 				}
