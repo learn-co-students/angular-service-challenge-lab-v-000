@@ -5,9 +5,11 @@ function RedditController(DomainService, SubRedditService) {
 	ctrl.subRedditPosts = [];
 	ctrl.domainPosts = [];
 
-	SubRedditService.getData('javascript', (function (res) {
+	SubRedditService
+		.getData('javascript')
+		.then(function (res) {
 			ctrl.subRedditPosts = res.data.data.children;
-		}));
+		});
 
 	DomainService
 		.getData('google.co.uk')
