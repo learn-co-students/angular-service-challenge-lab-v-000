@@ -12,7 +12,7 @@ function RedditController(DomainService, SubRedditService) {
 		});
 
 	DomainService
-		.getData('google.co.uk')
+		.getData('http://localhost:8080/rest/domain/google.co.uk')
 		.then(function (res) {
 			ctrl.domainPosts = res.data.data.children;
 		});
