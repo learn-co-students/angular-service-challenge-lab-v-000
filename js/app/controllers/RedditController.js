@@ -6,7 +6,7 @@ function RedditController(DomainService, SubRedditService) {
 	ctrl.domainPosts = [];
 
 	SubRedditService
-		.getData('javascript')
+		.getData('rails')
 		.then(function (res) {
 			ctrl.subRedditPosts = res.data.data.children;
 		});
