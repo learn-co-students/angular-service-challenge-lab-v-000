@@ -11,40 +11,40 @@
 </head>
 <body>
 
-    <div ng-app="app" class="app">
-        <div ng-controller="RedditController as ctrl">
-            <h1>Domain Results</h1>
-            <ul>
-                <li ng-repeat="post in ctrl.subRedditPosts">
-                    <h4>{{ post.data.title }}</h4>
+  <div ng-app="app" class="app">
+    <div ng-controller="RedditController as ctrl">
+      <h1>Domain Results</h1>
+      <ul>
+        <li ng-repeat="post in ctrl.domainPosts">
+          <h4>{{ post.data.title }}</h4>
 
-                    by {{ post.data.author }}
-                </li>
-            </ul>
-            <div ng-if="!ctrl.subRedditPosts.length">
-                Loading...
-            </div>
+          by {{ post.data.author }}
+        </li>
+      </ul>
+      <div ng-if="!ctrl.subRedditPosts.length">
+          Loading...
+      </div>
 
-            <h1>Subreddit Posts</h1>
-            <ul>
-                <li ng-repeat="post in ctrl.domainPosts">
-                    <h4>{{ post.data.title }}</h4>
+      <h1>Subreddit Posts</h1>
+      <ul>
+        <li ng-repeat="post in ctrl.subRedditPosts">
+          <h4>{{ post.data.title }}</h4>
 
-                    by {{ post.data.author }}
-                </li>
-            </ul>
+          by {{ post.data.author }}
+        </li>
+      </ul>
 
-            <div ng-if="!ctrl.domainPosts.length">
-                Loading...
-            </div>
-        </div>
+      <div ng-if="!ctrl.domainPosts.length">
+          Loading...
+      </div>
     </div>
+  </div>
 
-    <script src="js/angular.js"></script>
-    <script src="js/app/app.js"></script>
-    <script src="js/app/controllers/RedditController.js"></script>
-    <script src="js/app/services/SubRedditService.js"></script>
-    <script src="js/app/services/DomainService.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="js/app/app.js"></script>
+  <script src="js/app/controllers/RedditController.js"></script>
+  <script src="js/app/services/SubRedditService.js"></script>
+  <script src="js/app/services/DomainService.js"></script>
 
 </body>
 </html>
