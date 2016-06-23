@@ -22,6 +22,7 @@ describe('SubRedditService', function () {
 		SubRedditService
 			.getData('javascript')
 			.then(function (res) {
+				console.log(res.data);
 				if (res.data && res.data[0].key === 'hello') {
 					done();
 				}
