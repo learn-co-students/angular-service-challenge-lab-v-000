@@ -5,8 +5,10 @@ function RedditController(DomainService, SubRedditService) {
 	ctrl.subRedditPosts = [];
 	ctrl.domainPosts = [];
 
+	debugger;
+
 	SubRedditService
-		.getData('javascript')
+		.getData('news')
 		.then(function (res) {
 			ctrl.subRedditPosts = res.data.data.children;
 		});
