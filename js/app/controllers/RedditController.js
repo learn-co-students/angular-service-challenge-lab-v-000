@@ -18,6 +18,4 @@ function RedditController(DomainService, SubRedditService) {
 		});
 }
 
-angular
-	.module('app')
-	.controller('RedditController', RedditController);
+app.controller('RedditController', RedditController);
