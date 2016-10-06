@@ -6,7 +6,7 @@ function RedditController(DomainService, SubRedditService) {
 	ctrl.domainPosts = [];
 
 	SubRedditService
-		.getData('javascript')
+		.getData('/rest/subreddit/' + name)
 		.then(function (res) {
 			ctrl.subRedditPosts = res.data.data.children;
 		});
@@ -21,3 +21,4 @@ function RedditController(DomainService, SubRedditService) {
 angular
 	.module('app')
 	.controller('RedditController', RedditController);
+	
