@@ -4,6 +4,7 @@ function RedditController(DomainService, SubRedditService) {
 
 	ctrl.subRedditPosts = [];
 	ctrl.domainPosts = [];
+	
 
 	SubRedditService
 		.getData('javascript')
