@@ -14,7 +14,6 @@ function RedditController(DomainService, SubRedditService) {
 	DomainService
 		.getData('google.co.uk')
 		.then(function (res) {
-			debugger
 			ctrl.domainPosts = res.data.data.children;
 		});
 }
