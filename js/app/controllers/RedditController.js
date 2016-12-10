@@ -1,7 +1,7 @@
 function RedditController(DomainService, SubRedditService) {
 
 	var ctrl = this;
-
+//  array of values filled by the http requests
 	ctrl.subRedditPosts = [];
 	ctrl.domainPosts = [];
 
@@ -21,3 +21,6 @@ function RedditController(DomainService, SubRedditService) {
 angular
 	.module('app')
 	.controller('RedditController', RedditController);
+
+
+	// Make sure you run stubby -d config.yml to mock our backend.
