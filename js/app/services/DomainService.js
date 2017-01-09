@@ -1,7 +1,7 @@
 function DomainService($http) {
-  this.getData = function () {
-    return $http.get('/rest/domain/google.co.uk');
-  }
+  this.getData = function (domain) {
+    return $http.get('/rest/domain/' + domain);
+  };
 }
 
 angular
