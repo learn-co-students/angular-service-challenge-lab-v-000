@@ -13,7 +13,7 @@
 
     <div ng-app="app" class="app">
         <div ng-controller="RedditController as ctrl">
-            <h1>Domain Results</h1>
+            <h1>Subreddit Posts</h1>
             <ul>
                 <li ng-repeat="post in ctrl.subRedditPosts">
                     <h4>{{ post.data.title }}</h4>
@@ -25,7 +25,7 @@
                 Loading...
             </div>
 
-            <h1>Subreddit Posts</h1>
+            <h1>Domain Posts</h1>
             <ul>
                 <li ng-repeat="post in ctrl.domainPosts">
                     <h4>{{ post.data.title }}</h4>
