@@ -12,10 +12,16 @@ module.exports = function (config) {
         plugins: [
             require("karma-chrome-launcher"),
             require("karma-jasmine"),
-            require("karma-spec-reporter")
+            require("karma-spec-reporter"),
+            require("karma-coverage")
         ],
-        preprocessors: {},
-        reporters: ['spec'],
+        preprocessors: {
+          'js/angular.js': ['coverage'],
+          'tests/angular-mocks.js': ['coverage'],
+          'js/app/**/*.js': ['coverage'],
+          'tests/*.spec.js': ['coverage']
+        },
+        reporters: ['spec', 'coverage'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
@@ -25,3 +31,4 @@ module.exports = function (config) {
         concurrency: Infinity
     })
 }
+//9876
