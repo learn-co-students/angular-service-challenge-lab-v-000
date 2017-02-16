@@ -6,13 +6,13 @@ function RedditController(DomainService, SubRedditService) {
 	ctrl.domainPosts = [];
 
 	SubRedditService
-		.getData('javascript')
+		.getData('dynastyff')
 		.then(function (res) {
 			ctrl.subRedditPosts = res.data.data.children;
 		});
 
 	DomainService
-		.getData('google.co.uk')
+		.getData('espn.com')
 		.then(function (res) {
 			ctrl.domainPosts = res.data.data.children;
 		});
